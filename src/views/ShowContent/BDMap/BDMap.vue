@@ -1,6 +1,6 @@
 <template>
 <div class="btn_container" :style="{marginLeft: cgWidth}">
-  <div id="allmap" ref="allmap"></div>
+  <div id="allmap" ref="allmap" :style="{height: bd_height}"></div>
 </div>
 </template>
 
@@ -10,6 +10,11 @@ export default {
   name: 'BDMap',
   props: {
     cgWidth: String
+  },
+  data () {
+    return {
+      bd_height: ''
+    }
   },
   methods: {
     map () {
@@ -22,10 +27,16 @@ export default {
       var marker = new BMap.Marker(point)
       map.addOverlay(marker)
       map.centerAndZoom(point, 11)
+    },
+    getBDMap () {
+      const documentheight = document.documentElement.clientHeight
+      const height = documentheight - 70
+      this.bd_height = height + 'px'
     }
   },
   mounted () {
     this.map()
+    this.getBDMap()
   }
 }
 </script>

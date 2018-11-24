@@ -1,51 +1,51 @@
 <template>
-<div class="btn_container" :style="{marginLeft: cgWidth}">
-  <el-row>
-    <el-col class="first_bg" :span="8">
-      <p>Swiper轮播</p>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div v-for="(item,index) in imgs" :key="index" class="swiper-slide"><img class="img" :src="item.src" alt=""></div>
+  <div class="btn_container" :style="{marginLeft: cgWidth}">
+    <el-row>
+      <el-col class="first_bg my_swiper" :span="10">
+        <p>Swiper轮播</p>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div v-for="(item,index) in imgs" :key="index" class="swiper-slide"><img class="img" :src="item.src" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </el-col>
-    <el-col class="first_bg" :span="11">
-      <div id="myChart" :style="{width: '100%', height: '400px'}"></div>
-    </el-col>
-  </el-row>
-  <el-row>
-    <el-col class="first_bg" :span="6">
-      <p>任务</p>
-      <div style="height: 300px;">
-        <el-steps direction="vertical" :active="3">
-          <el-step title="学习VUE" description="于2018/11/05完成目标"></el-step>
-          <el-step title="vue-cli+element-ui案例" description="于2018/11/14完成目标"></el-step>
-          <el-step title="学习Vuex" description="于2018/11/16完成目标"></el-step>
-          <el-step title="找到适合的工作" description="未完成"></el-step>
-        </el-steps>
-      </div>
-    </el-col>
-    <el-col class="first_bg" :span="6">
-      <div class="first_bg">
-        <p>消息栏</p>
-        <div>
-          <ul>
-            <li class="message" v-for="(message,index) in messages" :key="index">
-              <i class="Chat_Heads" :style="{backgroundImage: 'url(' + message.Chat_Heads + ')', backgroundSize:'contain'}"></i>
-              <span class="message_name">{{message.name}}</span><br>
-              <span class="message_text">{{message.text}}</span>
-            </li>
-          </ul>
+      </el-col>
+      <el-col class="first_bg" :span="13">
+        <div id="myChart" :style="{width: '100%', height: '400px'}"></div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col class="first_bg" :span="6">
+        <p>任务</p>
+        <div style="height: 300px;">
+          <el-steps direction="vertical" :active="3">
+            <el-step title="页面布局规划" description="已完成"></el-step>
+            <el-step title="框架及开发工具选定" description="已完成"></el-step>
+            <el-step title="完成后台页面" description="已完成"></el-step>
+            <el-step title="利用vueX管理数据" description="未完成"></el-step>
+          </el-steps>
         </div>
-      </div>
-    </el-col>
-    <el-col class="first_bg" :span="6">
-      <p>访问量统计</p>
-      <div id="myChart_2" :style="{width: '100%', height: '400px'}"></div>
-    </el-col>
-  </el-row>
-</div>
+      </el-col>
+      <el-col class="first_bg" :span="7">
+        <div class="first_bg">
+          <p>消息栏</p>
+          <div>
+            <ul>
+              <li class="message" v-for="(message,index) in messages" :key="index">
+                <i class="Chat_Heads" :style="{backgroundImage: 'url(' + message.Chat_Heads + ')', backgroundSize:'contain'}"></i>
+                <span class="message_name">{{message.name}}</span><br>
+                <span class="message_text">{{message.text}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </el-col>
+      <el-col class="first_bg" :span="9">
+        <p>访问量统计</p>
+        <div id="myChart_2" :style="{width: '100%', height: '400px'}"></div>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 
 <script>
@@ -239,7 +239,7 @@ export default {
     transition-delay:.3s;
   }
   .swiper-container {
-    width: 500px;
+    width: 100%;
     height: 300px;
     margin: 20px auto;
   }
@@ -264,8 +264,8 @@ export default {
     align-items: center;
   }
   /*.swiper-slide:nth-child(2){*/
-    /*background:#3183ff;*/
-    /*color:#fff;}*/
+  /*background:#3183ff;*/
+  /*color:#fff;}*/
   .swiper-slide p{
     transform:translateX(-200px);
     opacity:0;

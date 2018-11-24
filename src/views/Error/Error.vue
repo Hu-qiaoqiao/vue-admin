@@ -22,7 +22,10 @@ export default {
 .not_find{
   width: 612px;
   height: 200px;
-  margin: 300px auto;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-left: -306px;
   background-image: url(./images/404.png);
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%;

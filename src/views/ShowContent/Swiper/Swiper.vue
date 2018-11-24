@@ -16,6 +16,7 @@
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
   </div>
+  <div class="swiper_push"></div>
   <div class="swiper-container" id="swiper-container2">
     <div class="swiper-wrapper">
       <div class="swiper-slide" style="background-image:url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=513577268,2885670906&fm=26&gp=0.jpg)"></div>
@@ -102,5 +103,8 @@ export default {
     background-position: center;
     background-size: cover;
   }
-
+  .swiper_push{
+    width: 100%;
+    height: 400px;
+  }
 </style>
