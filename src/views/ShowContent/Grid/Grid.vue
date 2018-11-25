@@ -4,10 +4,11 @@
 </div>
 </template>
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'Grid',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   },
   data () {
     return {

@@ -12,10 +12,11 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'AnimateTwo',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   }
 }
 </script>

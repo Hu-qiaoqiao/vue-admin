@@ -45,10 +45,11 @@
 
 <script>
 import '../../../../static/js/index'
+import {mapState} from 'vuex'
 export default {
   name: 'slideshowone',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   }
 }
 </script>

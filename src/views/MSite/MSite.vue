@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <Header :changeWidth="changeWidth"/>
-    <SideNav :cgWidth="cgWidth" :isCollapse="isCollapse"/>
-    <router-view :cgWidth="cgWidth"></router-view>
+    <Header/>
+    <SideNav/>
+    <router-view></router-view>
     <div class="footer_push"></div>
     <Footer/>
   </div>
@@ -18,23 +18,6 @@ export default {
     SideNav,
     Footer,
     Header
-  },
-  data () {
-    return {
-      cgWidth: '200px',
-      isCollapse: false
-    }
-  },
-  methods: {
-    changeWidth (bool) {
-      if (bool) {
-        this.cgWidth = '200px'
-        this.isCollapse = false
-      } else {
-        this.cgWidth = '100px'
-        this.isCollapse = true
-      }
-    }
   }
 }
 </script>

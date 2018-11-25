@@ -51,59 +51,11 @@
 <script>
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
+import {mapState} from 'vuex'
 export default {
   name: 'Button',
-  props: {
-    cgWidth: String
-  },
-  data () {
-    return {
-      imgs: [
-        {
-          src: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1599805543,1571293957&fm=26&gp=0.jpg'
-        },
-        {
-          src: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=479269240,1349141881&fm=26&gp=0.jpg'
-        },
-        {
-          src: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2513677915,2336331501&fm=15&gp=0.jpg'
-        },
-        {
-          src: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2716919074,3970065003&fm=26&gp=0.jpg'
-        },
-        {
-          src: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1555459296,1312580910&fm=26&gp=0.jpg'
-        },
-        {
-          src: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2620860030,2092443729&fm=26&gp=0.jpg'
-        },
-        {
-          src: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=965887695,2749319726&fm=26&gp=0.jpg'
-        }
-      ],
-      messages: [
-        {
-          Chat_Heads: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2143940403,2597373267&fm=58',
-          name: '纳兰性德',
-          text: '人生若只如初见，何事秋风悲画扇。'
-        },
-        {
-          Chat_Heads: 'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1171991200,229832117&fm=58&bpow=322&bpoh=454',
-          name: '元稹',
-          text: '曾经沧海难为水，除却巫山不是云。'
-        },
-        {
-          Chat_Heads: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3390435948,2558761852&fm=58&bpow=400&bpoh=700',
-          name: '苏轼',
-          text: '但愿人长久，千里共婵娟。'
-        },
-        {
-          Chat_Heads: 'https://file.juzimi.com/category_pictures/201403/liyujingdianyulu849.jpg',
-          name: '李煜',
-          text: '问君能有几多愁？恰似一江春水向东流。'
-        }
-      ]
-    }
+  computed: {
+    ...mapState(['cgWidth', 'imgs', 'messages'])
   },
   mounted () {
     new Swiper('.swiper-container', {

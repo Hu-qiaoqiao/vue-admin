@@ -20,34 +20,14 @@
 </template>
 
 <script>
+import {mapState, mapActions} from 'vuex'
 export default {
   name: 'Header',
-  props: {
-    changeWidth: Function
-  },
-  data () {
-    return {
-      margin: '220px',
-      flag: true
-    }
+  computed: {
+    ...mapState(['margin'])
   },
   methods: {
-    cg () {
-      const headermain = document.querySelector('.header_main')
-      if (this.falg) {
-        this.margin = '220px'
-        this.changeWidth(true)
-        headermain.classList.remove('bg1')
-        headermain.classList.add('bg2')
-        this.falg = false
-      } else {
-        this.margin = '120px'
-        this.changeWidth(false)
-        headermain.classList.remove('bg2')
-        headermain.classList.add('bg1')
-        this.falg = true
-      }
-    }
+    ...mapActions(['cg'])
   }
 }
 </script>

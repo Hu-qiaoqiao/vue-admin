@@ -59,10 +59,11 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'ElSlideshow',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   }
 }
 </script>

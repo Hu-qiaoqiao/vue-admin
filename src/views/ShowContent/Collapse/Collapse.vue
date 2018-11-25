@@ -77,10 +77,11 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'Collapse',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   },
   data () {
     return {

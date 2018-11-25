@@ -6,10 +6,11 @@
 
 <script>
 import BMap from 'BMap'
+import {mapState} from 'vuex'
 export default {
   name: 'BDMap',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   },
   data () {
     return {

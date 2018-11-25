@@ -34,10 +34,11 @@
 <script>
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
+import {mapState} from 'vuex'
 export default {
   name: 'Button',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   },
   mounted () {
     new Swiper('#swiper-container1', {

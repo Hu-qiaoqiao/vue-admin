@@ -22,10 +22,11 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'AnimateThree',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   }
 }
 </script>

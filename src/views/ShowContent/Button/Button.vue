@@ -74,10 +74,11 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'Button',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   }
 }
 </script>

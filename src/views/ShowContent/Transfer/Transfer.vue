@@ -83,10 +83,11 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'Transfer',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   },
   data () {
     const generateData = _ => {

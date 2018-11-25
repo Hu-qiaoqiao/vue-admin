@@ -255,10 +255,11 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'Form',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   },
   data () {
     const checkAge = (rule, value, callback) => {

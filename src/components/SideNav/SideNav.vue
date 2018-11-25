@@ -80,16 +80,11 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'SideNav',
-  props: {
-    changeWidth: Function,
-    cgWidth: String,
-    isCollapse: Boolean
-  },
-  data () {
-    return {
-    }
+  computed: {
+    ...mapState(['cgWidth', 'isCollapse'])
   },
   methods: {
     goto (path) {

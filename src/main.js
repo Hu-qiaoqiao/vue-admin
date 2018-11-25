@@ -11,6 +11,7 @@ import Swiper from 'swiper'
 import Preview from 'vue-photo-preview'
 import 'vue-photo-preview/dist/skin.css'
 import echarts from 'echarts'
+import store from './store'
 Vue.prototype.$echarts = echarts
 Vue.use(Preview)
 Vue.use(ElementUI, Swiper)
@@ -21,6 +22,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

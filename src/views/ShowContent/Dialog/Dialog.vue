@@ -91,43 +91,17 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'Dialog',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth', 'gridData', 'form'])
   },
   data () {
     return {
       dialogVisible: false,
-      gridData: [{
-        date: '2018-11-15',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2018-11-15',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2018-11-15',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2018-11-15',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }],
       dialogTableVisible: false,
       dialogFormVisible: false,
-      form: {
-        name: '',
-        region: '',
-        date1: '',
-        date2: '',
-        delivery: false,
-        type: [],
-        resource: '',
-        desc: ''
-      },
       formLabelWidth: '120px',
       outerVisible: false,
       innerVisible: false,

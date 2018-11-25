@@ -27,10 +27,11 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'MessageBox',
-  props: {
-    cgWidth: String
+  computed: {
+    ...mapState(['cgWidth'])
   },
   methods: {
     open () {
